@@ -5,6 +5,10 @@ from course import CourseClass
 from student import StudentClass
 from result  import resultClass
 from report import reportClass
+# from logout import logout_system
+# from Login import Login_system
+# from ragis import registration
+
 class RMS:
     def __init__(self,root):
         self.root=root
@@ -36,10 +40,10 @@ class RMS:
         self.lbl_course = Label(self.root,text="Total Courses\n[0]",font=('goudy old style',20),bd=10,relief=RIDGE,bg='#e43b06',fg='white')
         self.lbl_course.place(x=400,y=530,width=300,height=75)
 
-        self.lbl_student = Label(self.root, text="Total Student\n[0]", font=('goudy old style', 20), bd=10, relief=RIDGE,bg='#0676ad', fg='white')
+        self.lbl_student = Label(self.root, text="Total Courses\n[0]", font=('goudy old style', 20), bd=10, relief=RIDGE,bg='#0676ad', fg='white')
         self.lbl_student.place(x=705, y=530, width=300, height=75)
 
-        self.lbl_result = Label(self.root, text="Total\n[0]", font=('goudy old style', 20), bd=10, relief=RIDGE,bg='#038074', fg='white')
+        self.lbl_result = Label(self.root, text="Total Courses\n[0]", font=('goudy old style', 20), bd=10, relief=RIDGE,bg='#038074', fg='white')
         self.lbl_result.place(x=1010, y=530, width=300, height=75)
 
         # ===footer===
@@ -57,6 +61,12 @@ class RMS:
     def add_report(self):
         self.new_win=Toplevel(self.root)
         self.new_obj=reportClass(self.new_win)
+    # def add_logout(self):
+    #     self.new_win=Toplevel(self.root)
+    #     self.new_obj=Login_system(self.new_win)
+    # def signip(self):
+    #     self.new_win=Toplevel(self.root)
+    #     self.new_obj=registration(self.new_win)
 
 if __name__=="__main__":
     root=Tk()

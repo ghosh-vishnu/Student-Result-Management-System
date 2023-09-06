@@ -53,7 +53,7 @@ class StudentClass:
         self.txt_gender.current(0)
 
         # ================================================Column2============================================================
-        # lbl_dob = Label(self.root, text="D.O.B", font=("goudy old style", 15, "bold"), bg="white").place(x=360,y=60)
+        lbl_dob = Label(self.root, text="D.O.B", font=("goudy old style", 15, "bold"), bg="white").place(x=360,y=60)
         lbl_contact = Label(self.root, text="Contact", font=("goudy old style", 15, "bold"), bg="white").place(x=360,y=100)
         lbl_admission = Label(self.root, text="Admission", font=("goudy old style", 15, "bold"), bg="white").place(x=360, y=140)
         lbl_course = Label(self.root, text="Course", font=("goudy old style", 15, "bold"), bg="white").place(x=360,y=180)
@@ -63,7 +63,7 @@ class StudentClass:
         # self.course_list=[]
         # function_call to update the List
         self.fetch_course()
-        # self.txt_dob = Entry(self.root, textvariable=self.var_dob, font=("goudy old style", 15, "bold"),bg="lightyellow").place(x=480, y=60, width=200)
+        self.txt_dob = Entry(self.root, textvariable=self.var_dob, font=("goudy old style", 15, "bold"),bg="lightyellow").place(x=480, y=60, width=200)
         self.txt_contact = Entry(self.root, textvariable=self.var_contact, font=("goudy old style", 15, "bold"), bg="lightyellow").place(x=480, y=100, width=200)
         self.txt_admission= Entry(self.root, textvariable=self.var_a_date, font=("goudy old style", 15, "bold"),bg="lightyellow").place(x=480, y=140, width=200)
         self.txt_course = ttk.Combobox(self.root, textvariable=self.var_course, values=self.course_list,font=("goudy old style", 15, "bold"), state="readonly", justify=CENTER)
@@ -74,6 +74,7 @@ class StudentClass:
         # ====================================================Text Address===================================================
         self.txt_address = Text(self.root, font=("goudy old style", 15, "bold"), bg="lightyellow")
         self.txt_address.place(x=150, y=260, width=540, height=100)
+        footer = Label(self.root, text="SRMS-STUDENT RESULT MANAGEMENT SYSTEM\nContact Us For Any Technical Issue: 7061468001",font=("goudy old",12),bg="#033054",fg="white").pack(side=BOTTOM,fill=X)
 
         # =====================================================Buttons==============================================================
 
@@ -115,7 +116,7 @@ class StudentClass:
         self.CourseTable.heading("name", text="Name")
         self.CourseTable.heading("email", text="Email")
         self.CourseTable.heading("gender", text="Gender")
-        # self.CourseTable.heading("dob", text="D.O.B")
+        self.CourseTable.heading("dob", text="D.O.B")
         self.CourseTable.heading("contact", text="Contact")
         self.CourseTable.heading("admission", text="Admission")
         self.CourseTable.heading("course", text="Course")
@@ -140,6 +141,7 @@ class StudentClass:
         self.CourseTable.pack(fill=BOTH, expand=1)
         self.CourseTable.bind("<ButtonRelease-1>", self.get_data)
         self.show()
+    
 
 #==================================================================================================================================================
     def clear(self) :

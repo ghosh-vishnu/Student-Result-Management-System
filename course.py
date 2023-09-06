@@ -12,6 +12,8 @@ class CourseClass:
         self.root.focus_force()
         #===title===
         title=Label(self.root,text="Manage Course Details",font=("goudy old",20,"bold"),bg="#0000ff",fg="white").place(x=10,y=15,width=1180,height=35)
+        footer = Label(self.root, text="SRMS-STUDENT RESULT MANAGEMENT SYSTEM\nContact Us For Any Technical Issue: 7061468001",font=("goudy old",12),bg="#033054",fg="white").pack(side=BOTTOM,fill=X)
+
 #=========================Variable========================
         self.var_course=StringVar()
         self.var_duration=StringVar()

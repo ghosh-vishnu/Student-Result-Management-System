@@ -13,6 +13,8 @@ class reportClass:
         self.root.focus_force()
         #===title===
         title=Label(self.root,text="View Students Results",font=("goudy old",20,"bold"),bg="orange",fg="#262626").place(x=10,y=15,width=1180,height=50)
+        footer = Label(self.root, text="SRMS-STUDENT RESULT MANAGEMENT SYSTEM\nContact Us For Any Technical Issue: 7061468001",font=("goudy old",12),bg="#033054",fg="white").pack(side=BOTTOM,fill=X)
+
         # ======================================Search===========================================================================================================
         self.var_id=""
         self.var_search=StringVar()
@@ -45,23 +47,23 @@ class reportClass:
         btn_delete= Button(self.root, text="Delete", font=("goudy old style", 20, "bold"), bg="red", fg="white",cursor="hand2",command=self.delete).place(x=500, y=350, width=150, height=35)
 
 #=========================================================================================================
-    def search(self, row=None):
+    def search(self):
         con=sqlite3.connect(database='rms.db')
         cur=con.cursor()
         try:
             if self.var_search.get()=="":
-                messagebox.showerror("Error","Roll Number Should be Required",parent=self.root)
+                messagebox.showerror("Error","Name Should be Required",parent=self.root)
             else:
                 cur.execute(f"select * from result where name LIKE '%{self.var_search.get()}%'")
                 row=cur.fetchone()
                 if row!=None:
                     self.var_id=row[0]
-                    self.roll.config(text=row[1])
-                    self.name.config(text=row[2])
-                    self.course.config(text=row[3])
-                    self.marks.config(text=row[4])
-                    self.full.config(text=row[5])
-                    self.per.config(text=row[6])
+                    self.roll.config(text=row[0])
+                    self.name.config(text=row[1])
+                    self.course.config(text=row[2])
+                    self.marks.config(text=row[3])
+                    self.full.config(text=row[4])
+                    self.per.config(text=row[5])
 
                 else:
                     messagebox.showerror("Error!","No Record Found",parent=self.root)
