@@ -92,7 +92,7 @@ class CourseClass:
         self.var_charges.set('')
         self.var_Search.set('')
         # self.var_description.set(row[4])
-        self.txt_description.delete('1.0',END)
+        self.txt_description.delete(END)
         self.txt_courseName.config(state=NORMAL)
 #======================================================================================================================================
     def delete(self):

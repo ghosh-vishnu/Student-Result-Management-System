@@ -18,7 +18,6 @@ class RMS:
         #=========================================Menu=============================================
         M_Frame=LabelFrame(self.root,text="Menus",font=("Times New  Roman",15),bg="white")
         M_Frame.place(x=10,y=70,width=1340,height=80)
-
         #===Menu Buttons====
         btn_course=Button(M_Frame,text="Course",font=("goudy old style",15,'bold'),bg='#0b5377',fg='white',cursor='hand2',command=self.add_course).place(x=20,y=5,width=200,height=40)
         btn_student = Button(M_Frame, text="Student", font=("goudy old style", 15, 'bold'), bg='#a5a52a',fg='white',cursor='hand2',command=self.add_student).place(x=240,y=5,width=200,height=40)
@@ -37,10 +36,10 @@ class RMS:
         self.lbl_course = Label(self.root,text="Total Courses\n[0]",font=('goudy old style',20),bd=10,relief=RIDGE,bg='#e43b06',fg='white')
         self.lbl_course.place(x=400,y=530,width=300,height=75)
 
-        self.lbl_student = Label(self.root, text="Total Courses\n[0]", font=('goudy old style', 20), bd=10, relief=RIDGE,bg='#0676ad', fg='white')
+        self.lbl_student = Label(self.root, text="Total Student\n[0]", font=('goudy old style', 20), bd=10, relief=RIDGE,bg='#0676ad', fg='white')
         self.lbl_student.place(x=705, y=530, width=300, height=75)
 
-        self.lbl_result = Label(self.root, text="Total Courses\n[0]", font=('goudy old style', 20), bd=10, relief=RIDGE,bg='#038074', fg='white')
+        self.lbl_result = Label(self.root, text="Total\n[0]", font=('goudy old style', 20), bd=10, relief=RIDGE,bg='#038074', fg='white')
         self.lbl_result.place(x=1010, y=530, width=300, height=75)
 
         # ===footer===

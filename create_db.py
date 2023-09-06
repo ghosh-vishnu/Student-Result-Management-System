@@ -12,5 +12,4 @@ def create_db():
     con.commit()
 
     con.close()
-
 create_db()
